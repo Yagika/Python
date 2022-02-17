@@ -12,8 +12,7 @@
 # приклад юзера {'id':1,'name':'Max', 'age':35,'status':False},{'id':2,'name':'Bil', 'age':14,'status':True}
 # ,{'id':3,'name':'Kira', 'age':18,'status':False}
 st = True
-users_list = [{'id': 1, 'name': 'Max', 'age': 35, 'status': False}, {'id': 2, 'name': 'Bil', 'age': 14, 'status': True},
-              {'id': 3, 'name': 'Kira', 'age': 18, 'status': False}]
+users_list = []
 while st:
     st = input('1)додававання нового юзера' + '\n' +
                '2)вивід всіх юзерів' + '\n' +
