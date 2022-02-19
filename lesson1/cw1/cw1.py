@@ -11,9 +11,23 @@
 #
 # приклад юзера {'id':1,'name':'Max', 'age':35,'status':False},{'id':2,'name':'Bil', 'age':14,'status':True}
 # ,{'id':3,'name':'Kira', 'age':18,'status':False}
-st = True
 users_list = []
-while st:
+
+
+def counter():
+    count = 0
+
+    def inc():
+        nonlocal count
+        count += 1
+        return count
+
+    return inc
+
+
+gen = counter()
+
+while True:
     st = input('1)додававання нового юзера' + '\n' +
                '2)вивід всіх юзерів' + '\n' +
                '3)вивід всіх юзерів за віком' + '\n' +
@@ -21,7 +35,10 @@ while st:
                '5)заміна статуса юзера на протилежний' + '\n' +
                '6) вихід з меню\nСделайте свой выбор: ')
     if st == '1':
-        users_list.append(input())
+        name = input('Enter name')
+        age = input('Enter age')
+        status = input('Enter status')
+        users_list.append({'id': gen(), 'name': name, 'age': int(age), 'status': bool(status)})
     elif st == '2':
         print('users_list=', users_list)
     elif st == '3':
