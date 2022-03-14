@@ -34,13 +34,13 @@ print(get_all())
 # expanded_form(70304) # return '70000 + 300 + 4'
 def expanded_form(n: int) -> str:
     l: str = str(n)
-    list: list[str] = []
+    list1: list1[str] = []
     for i in range(len(l)):
         if l[i] == '0':
             pass
         else:
             list.append(l[i] + '0' * (len(l) - 1 - i))
-    return '+'.join(list)
+    return '+'.join(list1)
 
 
 print(expanded_form(7003048))
