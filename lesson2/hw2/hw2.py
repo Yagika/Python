@@ -5,25 +5,25 @@
 # запишите 5 тудушек
 # и выведете все
 # 2) протипизировать первое задание
-# def notebook() -> list:
-#     todo_list: list[str] = []
-#
-#     def add_todo(todo: str) -> None:
-#         return todo_list.append(todo)
-#
-#     def get_all() -> list:
-#         return todo_list
-#
-#     return [add_todo, get_all]
-#
-#
-# add_todo, get_all = notebook()
-# add_todo('Eat')
-# add_todo('Surf the Net')
-# add_todo('Do homework')
-# add_todo('Play game')
-# add_todo('Sleep')
-# print(get_all())
+def notebook() -> list:
+    todo_list: list[str] = []
+
+    def add_todo(todo: str) -> None:
+        return todo_list.append(todo)
+
+    def get_all() -> list:
+        return todo_list
+
+    return [add_todo, get_all]
+
+
+add_todo, get_all = notebook()
+add_todo('Eat')
+add_todo('Surf the Net')
+add_todo('Do homework')
+add_todo('Play game')
+add_todo('Sleep')
+print(get_all())
 
 
 # 3) создать функцию которая будет возвращать сумму разрядов числа в виде строки (тоже с типизацией)
